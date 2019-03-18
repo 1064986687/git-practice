@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        body{
+            margin:0;
+            padding-top: 200px;
+        }
+        .CSS3d-box,.CSS3d-box .outer,.CSS3d-box .inner,.CSS3d-box .inner div{
+            width: 300px;
+            height: 300px;
+        }
+        .CSS3d-box{
+            margin:0 auto;
+            animation: fly 4s linear infinite;
+            transform-style: preserve-3d;
+        }
+        @keyframes fly{
+            0%{transform: rotateY(0);}
+            100%{transform: rotateY(360deg);}
+        }
+        .CSS3d-box .outer{
+            transform-style: preserve-3d;
+            transform: rotateX(55deg);
+        }
+        .CSS3d-box .inner{
+            transform-style: preserve-3d;
+            transform: rotateY(45deg);
+            position: relative;
+        }
+        .CSS3d-box .inner div{
+            transform-style: preserve-3d;
+            position: absolute;
+        }
+        .CSS3d-box .plane-1{
+            background:url(images/1.jpg);
+            right: -150px;
+            transform: rotateY(90deg);
+        }
+        .CSS3d-box .plane-2{
+            background:url(images/2.jpg);
+            left: -150px;
+            transform: rotateY(90deg);
+        }
+        .CSS3d-box .plane-3{
+            background:url(images/3.jpg);
+            transform: translateZ(150px);
+        }
+        .CSS3d-box .plane-4{
+            background:url(images/4.jpg);
+            transform: translateZ(-150px);
+        }
+        .CSS3d-box .plane-5{
+            background:url(images/5.jpg);;
+            transform: rotateX(-90deg);
+            bottom: -150px;
+        }
+        .CSS3d-box .plane-6{
+            background:url(images/6.jpg);
+            transform: rotateX(-90deg);
+            top: -150px;
+        }
+        .stage{
+            width:600px;
+            margin:105px auto;
+            position: relative;
+            z-index: 1;
+        }
+        .container{transform-style: preserve-3d;}
+        .side{
+            background:linear-gradient(#faeaea,pink);
+            border: 1px solid white;
+            position: absolute;
+            font-size: 20px;
+            font-weight: bold;
+            color:tomato;
+            text-align: center;
+            line-height: 40px;
+        }
+        .top{
+            width:500px;
+            height: 500px;
+            transform: rotateX(80deg) translateZ(100px);
+        }
+        .bottom{
+            width:500px;
+            height: 500px;
+            transform: rotateX(80deg) translateZ(100px);
+        }
+        .left{
+            width:500px;
+            height: 20px;
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .right{
+            width:500px;
+            height: 20px;
+            transform:rotateY(90deg) translateZ(100px);
+        }
+        .front{
+            width:600px;
+            height: 40px;
+            transform:translateZ(100px);
+            border-top-left-radius: 20px 15px;
+            border-top-right-radius: 20px 15px;
+        }
+        .back{
+            width:500px;
+            height: 20px;
+            transform: rotateX(180deg) translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+    <audio src="happybirthday.mp3" controls="controls" hidden="hidden" autoplay="autoplay" loop="loop"></audio>
+    <div class="CSS3d-box">
+        <div class="outer">
+            <div class="inner">
+                <div class="plane-1"></div>
+                <div class="plane-2"></div>
+                <div class="plane-3"></div>
+                <div class="plane-4"></div>
+                <div class="plane-5"></div>
+                <div class="plane-6"></div>
+            </div>
+        </div>
+    </div>
+    <div class="stage">
+        <div class="container">
+            <div class=" side front">Happy Birthday</div>
+            <!--
+            <div class="side back"></div>
+            <div class=" side left"></div>
+            <div class="side right"></div>
+            <div class=" side top"></div>
+            <div class="side bottom"></div>
+            -->
+        </div>
+        
+    </div>
+    
+</body>
+</html>
